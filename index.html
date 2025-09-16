@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Application</title>
+  </head>
+  <body>
+    <main id="app">
+      <nav>
+        <h2>My Application</h2>
+        <button id="logout-button">Logout</button>
+      </nav>
+      <form id="login-form">
+        <label
+          >User
+          <input type="text" name="username" placeholder="Last name" required />
+          <button type="submit">Login</button>
+        </label>
+      </form>
+      <h3 id="welcome-text"></h3>
+    </main>
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>
