@@ -11,7 +11,13 @@ export class PersonController {
     const foundPerson = await this.personRepository.findByLastName(lastName);
 
     if (foundPerson) {
-      return `Hallo ${foundPerson.getFullName()}!`;
+      const currentHour = new Date().getHours();
+
+      if (currentHour < 12) {
+        return `Goedemorgen ${foundPerson.getFullName()}!`;
+      } else {
+        return `Goedemiddag ${foundPerson.getFullName()}!`;
+      }
     }
     return `Wie is '${lastName}'?`;
   }

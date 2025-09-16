@@ -26,6 +26,22 @@ describe("PersonController", () => {
 
       expect(greeting).toContain("Pieter Moens!");
     });
+
+    it("should greet with 'Goedemorgen' before noon", async () => {
+      vi.setSystemTime(new Date(2025, 8, 1, 10, 0));
+
+      const greeting = await controller.hello("moens");
+
+      expect(greeting).toBe("Goedemorgen Pieter Moens!");
+    });
+
+    it("should greet with 'Goedemiddag' in the afternoon", async () => {
+      vi.setSystemTime(new Date(2025, 8, 1, 15, 0));
+
+      const greeting = await controller.hello("moens");
+
+      expect(greeting).toBe("Goedemiddag Pieter Moens!");
+    });
   });
 
   describe("when a person does not exist", () => {
