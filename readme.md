@@ -57,3 +57,12 @@ npx playwright install --with-deps
 # Run e2e tests
 npm run test:e2e
 ```
+
+## Links
+
+- https://agilemanifesto.org/iso/nl/manifesto.html
+- http://www.extremeprogramming.org/rules.html
+- https://martinfowler.com/articles/practical-test-pyramid.html
+- https://martinfowler.com/bliki/TestDrivenDevelopment.html
+- https://martinfowler.com/bliki/GivenWhenThen.html
+- https://wiki.c2.com/?MakeItWorkMakeItRightMakeItFast
